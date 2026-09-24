@@ -105,22 +105,68 @@
     <p>Rellena el formulario y te respondemos lo antes posible.</p>
     <p class="contact-direct">También puedes escribirnos directamente por <a data-whatsapp href="#">WhatsApp</a> o por <a href="mailto:info@cempi.es">info@cempi.es</a>.</p>
   </div>
-  <form id="contact-form">
-    <div class="form-grid">
-      <input required name="nombre" placeholder="Nombre">
-      <input required name="contacto" placeholder="Email o WhatsApp">
-      <select name="universidad"><option value="">Universidad</option><option>UDC</option><option>Otra</option></select>
-      <input name="carrera" placeholder="Carrera">
-      <select required name="asignatura">
-        <option value="">Asignatura</option><option>Álgebra</option><option>Cálculo y Análisis</option>
-        <option>Estadística</option><option>Probabilidad</option><option>Matemáticas para Ingeniería</option>
-        <option>Matemáticas para Informática</option><option>Matemáticas para Economía/ADE</option><option>Otra</option>
-      </select>
-      <textarea name="mensaje" placeholder="¿En qué podemos ayudarte?"></textarea>
-    </div>
-    <button class="btn btn-orange full" type="submit">Enviar solicitud</button>
-    <p class="form-note">Al enviar se abrirá tu aplicación de correo con el mensaje preparado.</p>
-  </form>
+<form action="https://formspree.io/f/xqpalzdw" method="POST">
+
+  <div class="form-grid">
+
+    <input required
+           type="text"
+           name="nombre"
+           placeholder="Nombre">
+
+    <input required
+           type="email"
+           name="email"
+           placeholder="Email">
+
+    <input
+           type="text"
+           name="whatsapp"
+           placeholder="WhatsApp (opcional)">
+
+    <select name="universidad">
+      <option value="">Universidad</option>
+      <option>UDC</option>
+      <option>Otra</option>
+    </select>
+
+    <input
+           type="text"
+           name="carrera"
+           placeholder="Carrera">
+
+    <select required name="asignatura">
+      <option value="">Asignatura</option>
+      <option>Álgebra</option>
+      <option>Cálculo y Análisis</option>
+      <option>Estadística</option>
+      <option>Probabilidad</option>
+      <option>Matemáticas para Ingeniería</option>
+      <option>Matemáticas para Informática</option>
+      <option>Matemáticas para Economía/ADE</option>
+      <option>Otra</option>
+    </select>
+
+    <textarea
+           name="mensaje"
+           placeholder="¿En qué podemos ayudarte?"></textarea>
+
+  </div>
+
+  <input
+         type="hidden"
+         name="_subject"
+         value="Nueva solicitud de clases - CEMPI">
+
+  <button class="btn btn-orange full" type="submit">
+    Enviar solicitud
+  </button>
+
+  <p class="form-note">
+    Te responderemos lo antes posible.
+  </p>
+
+</form>
 </section>
 </main>
 
